@@ -30,9 +30,9 @@ jobs:
           echo "    draw = ImageDraw.Draw(fin)"                                       >> test.py
           echo "    for x in range(0, 128, 16):"                                      >> test.py
           echo "      for y in range(0, 128, 16):"                                    >> test.py
-          echo "        r1,g1,b1,a1 = im.getpixel((x//16, y//16))"                    >> test.py
-          echo "        r2,g2,b2,a2 = l1.getpixel((x//16, y//16))"                    >> test.py
-          echo "        col = (int((r1/255)*(r2/255) * 255), int((g1/255)*(g2/255)*255), int((b1/255)*(b2/255)*255), int((a1/255)*(a2/255)*255))">> test.py
+          echo "        c1 = im.getpixel((x//16, y//16))"                             >> test.py
+          echo "        c2 = l1.getpixel((x//16, y//16))"                             >> test.py
+          echo "        col = (int((c1[0] * (255 - c2[3]) + c2[0] * c2[3]) / 255), int((c1[1] * (255 - c2[3]) + c2[1] * c2[3]) / 255), int((c1[2] * (255 - c2[3]) + c2[2] * c2[3]) / 255), int(255 - ((255 - c1[3]) * (255 - c2[3]) / 255)))">> test.py
           echo "        draw.rectangle((x, y, x+16, y+16), fill=col)"                 >> test.py
           echo "    fin.save(('heads/'+f).lower(), format='PNG')"                     >> test.py
           
