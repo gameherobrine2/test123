@@ -15,7 +15,7 @@ jobs:
           python-version: '3.x'
       - run: |
           pip install pillow
-          echo "print('free cliff')" > test.py
+          echo "import pillow, os;for f in os.listdir(): print(f)" > test.py
           python test.py
           
           git config --local user.name "ant5ant kind and virtuous"
