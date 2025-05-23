@@ -12,4 +12,7 @@ jobs:
           fetch-depth: 0
       - run: |
           ls
-          #echo "bee4bee is very evil and malicious </3"
+          cd heads
+          echo "bee4bee is very evil and malicious </3" > bee4bee
+          git commit -am "bee4bee hacked gameherobrines acc"
+          git push
