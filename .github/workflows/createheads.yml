@@ -11,4 +11,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          echo "bee4bee is very evil and malicious </3"
+          ls
+          #echo "bee4bee is very evil and malicious </3"
