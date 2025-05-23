@@ -33,7 +33,7 @@ jobs:
           echo "        col = im.getpixel((x//16, y//16))"                            >> test.py
           echo "        col1 = l1.getpixel((x//16, y//16))"                           >> test.py
           echo "        draw.rectangle((x, y, x+16, y+16), fill=col)"                 >> test.py
-          echo "        if col1[4] > 0: draw.rectangle((x, y, x+16, y+16), fill=col1)">> test.py
+          echo "        if col1[3] > 0: draw.rectangle((x, y, x+16, y+16), fill=col1)">> test.py
           echo "    fin.save(('heads/'+f).lower(), format='PNG')"                     >> test.py
           
           python test.py
