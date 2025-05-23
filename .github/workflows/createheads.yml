@@ -26,7 +26,7 @@ jobs:
           echo "    draw = ImageDraw.Draw(fin)"                       >> test.py
           echo "    for x in range(0, 128, 16):"                      >> test.py
           echo "      for y in range(0, 128, 16):"                    >> test.py
-          echo "        col = im.getpixel((x//16, z//16))"            >> test.py
+          echo "        col = im.getpixel((x//16, y//16))"            >> test.py
           echo "        draw.rectangle((x, y, x+16, y+16), fill=col)" >> test.py
           echo "    fin.save(('heads/'+f).lower(), format='PNG')"     >> test.py
           
