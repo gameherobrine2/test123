@@ -20,6 +20,7 @@ jobs:
           echo "for f in os.listdir():"                               >> test.py
           echo "  if(f[-4:] == '.png' and os.path.isfile(f)):"        >> test.py
           echo "    os.rename(f, f.lower())"                          >> test.py
+          echo "    f = f.lower()"                                    >> test.py
           echo "    im = Image.open(f)"                               >> test.py
           echo "    im = im.crop((8, 8, 16, 16))"                     >> test.py
           echo "    im = im.convert('RGBA')"                          >> test.py
