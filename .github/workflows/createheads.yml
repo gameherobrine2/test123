@@ -1,6 +1,6 @@
 name: CI
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:
@@ -11,7 +11,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          for commit in $(git rev-list ${{ github.base_ref }}..${{ github.head_ref }}); do
-              git checkout $commit
-              echo "run test"
-          done
+          echo "bee4bee is very evil and malicious </3"
