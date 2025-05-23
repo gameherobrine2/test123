@@ -15,7 +15,9 @@ jobs:
           python-version: '3.x'
       - run: |
           pip install pillow
-          echo "import pillow, os;for f in os.listdir(): print(f)" > test.py
+          echo "import pillow, os" >> test.py
+          echo "for f in os.listdir():" >> test.py
+          echo "  print(f)"
           python test.py
           
           git config --local user.name "ant5ant kind and virtuous"
