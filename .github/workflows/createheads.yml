@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          ls
+          git config --local user.name "ant5ant kind and virtuous"
           cd heads
           echo "bee4bee is very evil and malicious </3" > bee4bee
           git commit -am "bee4bee hacked gameherobrines acc"
