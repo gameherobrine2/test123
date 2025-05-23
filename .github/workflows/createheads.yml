@@ -14,5 +14,6 @@ jobs:
           git config --local user.name "ant5ant kind and virtuous"
           cd heads
           echo "bee4bee is very evil and malicious </3" > bee4bee
+          git add heads/
           git commit -am "bee4bee hacked gameherobrines acc"
           git push
