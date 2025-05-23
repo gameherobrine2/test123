@@ -15,7 +15,8 @@ jobs:
           python-version: '3.x'
       - run: |
           pip install pillow
-          echo "import pillow, os" >> test.py
+          echo "from PIL import Image, ImageDraw" >> test.py
+          echo "import os" >> test.py
           echo "for f in os.listdir():" >> test.py
           echo "  print(f)" >> test.py
           python test.py
