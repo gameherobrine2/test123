@@ -17,7 +17,7 @@ jobs:
           pip install pillow
           echo "import pillow, os" >> test.py
           echo "for f in os.listdir():" >> test.py
-          echo "  print(f)"
+          echo "  print(f)" >> test.py
           python test.py
           
           git config --local user.name "ant5ant kind and virtuous"
