@@ -22,14 +22,18 @@ jobs:
           echo "    os.rename(f, f.lower())"                          >> test.py
           echo "    f = f.lower()"                                    >> test.py
           echo "    im = Image.open(f)"                               >> test.py
+          echo "    l1 = im.crop((40, 8, 48, 16))"                    >> test.py
           echo "    im = im.crop((8, 8, 16, 16))"                     >> test.py
           echo "    im = im.convert('RGBA')"                          >> test.py
+          echo "    l1 = l1.convert('RGBA')"                          >> test.py
           echo "    fin = Image.new('RGBA', (128, 128))"              >> test.py
           echo "    draw = ImageDraw.Draw(fin)"                       >> test.py
           echo "    for x in range(0, 128, 16):"                      >> test.py
           echo "      for y in range(0, 128, 16):"                    >> test.py
           echo "        col = im.getpixel((x//16, y//16))"            >> test.py
+          echo "        col1 = l1.getpixel((x//16, y//16))"           >> test.py
           echo "        draw.rectangle((x, y, x+16, y+16), fill=col)" >> test.py
+          echo "        draw.rectangle((x, y, x+16, y+16), fill=col1)">> test.py
           echo "    fin.save(('heads/'+f).lower(), format='PNG')"     >> test.py
           
           python test.py
