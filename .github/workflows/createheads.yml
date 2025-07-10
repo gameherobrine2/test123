@@ -38,7 +38,8 @@ jobs:
           
           python test.py
           
-          git config --local user.name "ant5ant kind and virtuous"
+          git config --global user.name "freehij"
+          git config --global user.email "freehij@colbux.xyz"
           cd heads
           git add *.png
           git add ../*.png
